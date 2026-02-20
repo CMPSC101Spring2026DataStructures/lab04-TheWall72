@@ -1,7 +1,7 @@
 
 # Basic Rock Paper Scissors Game
-# Name: Add Your Name Here
-# Date: Add The Date Here
+# Name: Austin Aspenwall
+# Date: 02/20/2026
 
 import random
 
@@ -51,9 +51,9 @@ def get_user_choice(num_to_choice):
 	
 
 #: Implement this function to randomly select the computer's choice.
-def get_computer_choice():
+def get_computer_choice(choices):
 	"""Randomly return 'rock', 'paper', or 'scissors'."""
-	return random.choice(['rock', 'paper', 'scissors'])
+	return random.choice(choices)
 
 # : Implement this function to determine the winner of a round.
 def determine_winner(user_choice, computer_choice):
@@ -102,7 +102,7 @@ def main():
 	for round_num in range(1, rounds + 1):
 		# : Get user and computer choices
 		user_choice = get_user_choice(num_to_choice)
-		computer_choice = get_computer_choice()
+		computer_choice = get_computer_choice(choices)
 		# : Determine winner
 		winner = determine_winner(user_choice, computer_choice)
 		# : Print round result
